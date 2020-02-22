@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe sangue! Doe vida! </title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   
+
+ <header>
+    <img class="logo"src="/logo.png" alt="imagem Doe">
+    <h2>A sua doação importa</h2>
+    <p>Até 3 vidas com 1 doação</p>
+    <p>Mais de 38.000 doações são necessarias todos os dias</p>
+    <p>Apenas 1.9% das população brasileira, boa sangue</p>
+    
+    <button>Quero Ajudar</button>
+ </header>
+
+ <section class="form hide">
+     <h2>Entre na lista de  doadores</h2>
+    <form action="/" method="POST">
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Nome Completo"
+            >
+        <input 
+            type="email" 
+            name="email" 
+            placeholder="Seu email"
+            >
+            <input 
+            type="text" 
+            name="blood" 
+            placeholder="tipo sanguineo"
+            >
+            <button> Quero Ajudar!</button>
+        </form>
+ </section>
+
+ <main>
+     <h2>últimos <span> doadores</span></h2>
+
+     <section class="donors">
+
+        {% for donor in donors %}
+
+         <div class="donor">
+             <div class="blood">{{donor.blood}}</div>
+             <p>{{donor.name}}</p>
+         </div>
+
+       {%endfor%}
+         
+      </section> 
+    </main>
+
+    <footer>
+        Com ❤ Carlos Martos | Rocketseat Maratona 3.0
+
+    </footer>
+ 
+    <script src="/scripts.js"></script>
+
+</body>
+</html>
